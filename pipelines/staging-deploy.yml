@@ -1,0 +1,166 @@
+schema: "1"
+pipeline:
+  application: amnesty
+  name: Deploy staging
+  template:
+    source: spinnaker://releng-deploy
+  variables:
+    triggerPipelineName: AMI Burn
+    targetAccount: preprod
+    environment: staging
+    regions:
+    - us-east-1
+    - eu-west-1
+    slackChannel: iot-edge-deploys
+    notificationConditions:
+    - pipeline.starting
+    - pipeline.complete
+    - pipeline.failed
+    hasSmokeTest: true
+    smokeTestJob: Amnesty-Test-Smoke-STG
+    hasFunctionalTest: true
+    functionalTestJob: Amnesty-Test-Functional-STG
+    clusters:
+    - name: amnesty-regionals_useast1
+      stack: regionals_useast1
+      region: us-east-1
+      availabilityZones:
+      - us-east-1c
+      - us-east-1d
+      - us-east-1e
+      minCapacity: 1
+      maxCapacity: 1
+      desiredCapacity: 1
+      keyPair: preprod-master
+      targetGroups:
+      - amnesty-regionals-ext
+      - amnesty-regionals-int
+      iamRole: app-amnesty-profile
+      securityGroups:
+      - sg-e5f32f92
+      - sg-a1c31cc6
+      strategy: redblack
+      subnetType: internal_globals_useast1
+      instanceType: t2.medium
+    - name: amnesty-regionals_euwest1
+      stack: regionals_euwest1
+      region: eu-west-1
+      availabilityZones:
+      - eu-west-1a
+      - eu-west-1b
+      - eu-west-1c
+      minCapacity: 1
+      maxCapacity: 1
+      desiredCapacity: 1
+      keyPair: preprod-master
+      targetGroups:
+      - amnesty-regionals-ext
+      - amnesty-regionals-int
+      iamRole: app-amnesty-profile
+      securityGroups:
+      - sg-0b8d4b71
+      - sg-64c7d001
+      strategy: redblack
+      subnetType: internal_globals_euwest1
+      instanceType: t2.medium
+stages:
+- id: enablePreviousServerGroupEuwest1
+  type: enableServerGroup
+  name: Enable Previous eu-west-1 Server Group
+  dependsOn:
+  - smokeTest1
+  config:
+    stageEnabled:
+      expression: "#stage('smoke-test').status.toString() != 'SUCCEEDED'"
+      type: expression
+    cloudProvider: aws
+    cloudProviderType: aws
+    cluster: amnesty-regionals_euwest1
+    credentials: preprod
+    regions:
+    - eu-west-1
+    target: ancestor_asg_dynamic
+- id: enablePreviousServerGroupUseast1
+  type: enableServerGroup
+  name: Enable Previous us-east-1 Server Group
+  dependsOn:
+  - smokeTest1
+  config:
+    stageEnabled:
+      expression: "#stage('smoke-test').status.toString() != 'SUCCEEDED'"
+      type: expression
+    cloudProvider: aws
+    cloudProviderType: aws
+    cluster: amnesty-regionals_useast1
+    credentials: preprod
+    regions:
+    - us-east-1
+    target: ancestor_asg_dynamic
+- id: rollbackNewServerGroup1
+  name: Rollback New eu-west-1 Server Group
+  type: disableServerGroup
+  inject:
+    after:
+    - enablePreviousServerGroupEuwest1
+  config:
+    stageEnabled:
+      expression: "#stage('smoke-test').status.toString() != 'SUCCEEDED'"
+      type: expression
+    cloudProvider: aws
+    cloudProviderType: aws
+    cluster: amnesty-regionals_euwest1
+    credentials: preprod
+    regions:
+    - eu-west-1
+    target: current_asg_dynamic
+- id: rollbackNewServerGroup2
+  name: Rollback New us-east-1 Server Group
+  type: disableServerGroup
+  inject:
+    after:
+    - enablePreviousServerGroupUseast1
+  config:
+    stageEnabled:
+      expression: "#stage('smoke-test').status.toString() != 'SUCCEEDED'"
+      type: expression
+    cloudProvider: aws
+    cloudProviderType: aws
+    cluster: amnesty-regionals_useast1
+    credentials: preprod
+    regions:
+    - us-east-1
+    target: current_asg_dynamic
+- id: destroyPreviousServerGroupUseast1
+  name: Destroy Old us-east-1 Server Group
+  type: destroyServerGroup
+  dependsOn:
+  - smokeTest1
+  config:
+    stageEnabled:
+      expression: "#stage('smoke-test').status.toString() == 'SUCCEEDED'"
+      type: expression
+    cloudProvider: aws
+    cloudProviderType: aws
+    cluster: amnesty-regionals_useast1
+    credentials: preprod
+    regions:
+    - us-east-1
+    target: ancestor_asg_dynamic
+- id: destroyPreviousServerGroupEuwest1
+  name: Destroy Old eu-west-1 Server Group
+  type: destroyServerGroup
+  dependsOn:
+  - smokeTest1
+  config:
+    stageEnabled:
+      expression: "#stage('smoke-test').status.toString() == 'SUCCEEDED'"
+      type: expression
+    cloudProvider: aws
+    cloudProviderType: aws
+    cluster: amnesty-regionals_euwest1
+    credentials: preprod
+    regions:
+    - eu-west-1
+    target: ancestor_asg_dynamic
+configuration:
+  inherit: ['concurrentExecutions', 'triggers', 'parameters', 'notifications']

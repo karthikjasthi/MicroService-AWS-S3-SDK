@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class st.amnesty.endpoints.RateLimitFunctionalSpec</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class st.amnesty.endpoints.RateLimitFunctionalSpec</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/st.amnesty.endpoints.html">st.amnesty.endpoints</a> &gt; RateLimitFunctionalSpec</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">3.499s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Invalid Token expects status 401</td>
+<td>0.600s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Valid Mobile Token expects status 403</td>
+<td>0.646s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">post No Bearer Token and expects status 401</td>
+<td>0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">post, get, get with eTag, delete overrides on S3</td>
+<td>2.246s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>--&gt; GET https://shardinfo-globald.smartthingsgdev.com/shards http/1.1
+--&gt; END GET
+&lt;-- 200 OK https://shardinfo-globald.smartthingsgdev.com/shards (1018ms)
+content-type: application/json
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251643328
+OkHttp-Received-Millis: 1524251643630
+
+[{&quot;id&quot;:&quot;eu01d&quot;,&quot;api&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;graph-eu01d-euwest1.smartthingsgdev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;client&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;cc-eu01d-euwest1.smartthingsgdev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;dev&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;dc-eu01d-euwest1.connect.smartthings.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;marketplace&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;marketplace-eu01d-euwest1.smartthingsgdev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;videoconn&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;vc-eu01d-euwest1.smartthingsgdev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;videohost&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;vh-eu01d-euwest1.smartthingsgdev.com&quot;,&quot;port&quot;:&quot;8300&quot;},&quot;apigateway&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;eu01d.smartthingsgdev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;shardtemplate&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;{service}-eu01d-euwest1.smartthingsgdev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;support&quot;:{&quot;welcomeUrl&quot;:&quot; https://support.smartthings.com/hc/en-uk/categories/200058800&quot;,&quot;customerPicsUrl&quot;:&quot;http://see.smartthings.com&quot;,&quot;supportUrl&quot;:&quot;https://support.smartthings.com/hc/en-uk&quot;,&quot;chatId&quot;:&quot;&quot;,&quot;email&quot;:&quot; support@smartthings.co.uk&quot;}},{&quot;id&quot;:&quot;vladtmp&quot;,&quot;api&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;87b1fef8.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;client&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;https://87b1fef8.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;dev&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;https://87b1fef8.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;marketplace&quot;:null,&quot;videoconn&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;https://87b1fef8.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;videohost&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;https://87b1fef8.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;apigateway&quot;:null,&quot;shardtemplate&quot;:null,&quot;support&quot;:null},{&quot;id&quot;:&quot;na99local&quot;,&quot;api&quot;:{&quot;scheme&quot;:&quot;http&quot;,&quot;host&quot;:&quot;localhost&quot;,&quot;port&quot;:&quot;8080&quot;},&quot;client&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;localhost&quot;,&quot;port&quot;:&quot;9090&quot;},&quot;dev&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;localhost&quot;,&quot;port&quot;:&quot;9443&quot;},&quot;marketplace&quot;:null,&quot;videoconn&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;localhost&quot;,&quot;port&quot;:&quot;443&quot;},&quot;videohost&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;localhost&quot;,&quot;port&quot;:&quot;8300&quot;},&quot;apigateway&quot;:{&quot;scheme&quot;:&quot;http&quot;,&quot;host&quot;:&quot;localhost&quot;,&quot;port&quot;:&quot;8080&quot;},&quot;shardtemplate&quot;:null,&quot;support&quot;:null},{&quot;id&quot;:&quot;na00d&quot;,&quot;api&quot;:null,&quot;client&quot;:null,&quot;dev&quot;:null,&quot;marketplace&quot;:null,&quot;videoconn&quot;:null,&quot;videohost&quot;:null,&quot;apigateway&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;na00d.smartthingsgdev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;shardtemplate&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;d{service}.api.smartthings.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;support&quot;:{&quot;welcomeUrl&quot;:&quot;https://support.smartthings.com/categories/20069939WelcometoSmartThings&quot;,&quot;customerPicsUrl&quot;:&quot;http://see.smartthings.com&quot;,&quot;supportUrl&quot;:&quot;http://support.smartthings.com&quot;,&quot;chatId&quot;:&quot;adb2a3dc1aeb470c9a805ce0213cfde4&quot;,&quot;email&quot;:&quot;support@smartthings.com&quot;}},{&quot;id&quot;:&quot;na99tom&quot;,&quot;api&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;tom-st-api.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;client&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;tom-st-client.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;dev&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;tom-st-dev.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;marketplace&quot;:null,&quot;videoconn&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;tom-st-videoconn.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;videohost&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;tom-st-videohost.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;apigateway&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;tom-st-apigateway.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;shardtemplate&quot;:null,&quot;support&quot;:null},{&quot;id&quot;:&quot;ap99lance&quot;,&quot;api&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;lance-st-api.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;client&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;lance-st-client.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;dev&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;lance-st-dev.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;marketplace&quot;:null,&quot;videoconn&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;lance-st-videoconn.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;videohost&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;lance-st-videohost.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;apigateway&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;lance-st-apigateway.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;shardtemplate&quot;:null,&quot;support&quot;:null},{&quot;id&quot;:&quot;na99vlad&quot;,&quot;api&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;vlad-st-api.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;client&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;vlad-st-client.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;dev&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;vlad-st-dev.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;marketplace&quot;:null,&quot;videoconn&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;vlad-st-videoconn.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;videohost&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;vlad-st-videohost.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;apigateway&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;vlad-st-apigateway.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;shardtemplate&quot;:null,&quot;support&quot;:null},{&quot;id&quot;:&quot;na02d&quot;,&quot;api&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;graph-na02d-uswest2.smartthingsvandev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;client&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;cc-na02d-uswest2.smartthingsvandev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;dev&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;dc-na02d-uswest2.smartthingsvandev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;marketplace&quot;:null,&quot;videoconn&quot;:null,&quot;videohost&quot;:null,&quot;apigateway&quot;:null,&quot;shardtemplate&quot;:null,&quot;support&quot;:{&quot;welcomeUrl&quot;:&quot;https://support.smartthings.com/categories/20069939WelcometoSmartThings&quot;,&quot;customerPicsUrl&quot;:&quot;http://see.smartthings.com&quot;,&quot;supportUrl&quot;:&quot;http://support.smartthings.com&quot;,&quot;chatId&quot;:&quot;adb2a3dc1aeb470c9a805ce0213cfde4&quot;,&quot;email&quot;:&quot;support@smartthings.com&quot;}},{&quot;id&quot;:&quot;na02local&quot;,&quot;api&quot;:{&quot;scheme&quot;:&quot;http&quot;,&quot;host&quot;:&quot;127.0.0.1&quot;,&quot;port&quot;:&quot;8080&quot;},&quot;client&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;127.0.0.1&quot;,&quot;port&quot;:&quot;9101&quot;},&quot;dev&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;127.0.0.1&quot;,&quot;port&quot;:&quot;9001&quot;},&quot;marketplace&quot;:null,&quot;videoconn&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;127.0.0.1&quot;,&quot;port&quot;:&quot;443&quot;},&quot;videohost&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;127.0.0.1&quot;,&quot;port&quot;:&quot;8300&quot;},&quot;apigateway&quot;:null,&quot;shardtemplate&quot;:null,&quot;support&quot;:null},{&quot;id&quot;:&quot;na01d&quot;,&quot;api&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;graph-na01d-useast1.smartthingsgdev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;client&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;cc-na01d-useast1.smartthingsgdev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;dev&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;dc-na01d-useast1.connect.smartthings.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;marketplace&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;marketplace-na01d-useast1.smartthingsgdev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;videoconn&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;vc-na01d-useast1.smartthingsgdev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;videohost&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;vh-na01d-useast1.smartthingsgdev.com&quot;,&quot;port&quot;:&quot;8300&quot;},&quot;apigateway&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;na01d.smartthingsgdev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;shardtemplate&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;{service}-na01d-useast1.smartthingsgdev.com&quot;,&quot;port&quot;:&quot;443&quot;},&quot;support&quot;:{&quot;welcomeUrl&quot;:&quot;https://support.smartthings.com/categories/20069939WelcometoSmartThings&quot;,&quot;customerPicsUrl&quot;:&quot;http://see.smartthings.com&quot;,&quot;supportUrl&quot;:&quot;http://support.smartthings.com&quot;,&quot;chatId&quot;:&quot;adb2a3dc1aeb470c9a805ce0213cfde4&quot;,&quot;email&quot;:&quot;support@smartthings.com&quot;}},{&quot;id&quot;:&quot;na99zach&quot;,&quot;api&quot;:{&quot;scheme&quot;:&quot;https&quot;,&quot;host&quot;:&quot;zach-st-api.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;client&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;zach-st-client.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;dev&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;zach-st-dev.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;marketplace&quot;:null,&quot;videoconn&quot;:null,&quot;videohost&quot;:null,&quot;apigateway&quot;:{&quot;scheme&quot;:&quot;&quot;,&quot;host&quot;:&quot;zach-apigateway-api.ngrok.io&quot;,&quot;port&quot;:&quot;443&quot;},&quot;shardtemplate&quot;:null,&quot;support&quot;:null}]
+&lt;-- END HTTP (6264-byte body)
+--&gt; POST https://auth-globald.smartthingsgdev.com/clients http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 311
+Authorization: Basic ZGF0YW1nbXQ6UG9ydGVyMDE=
+
+{&quot;name&quot;:&quot;amnesty-service-functional-test-service-client&quot;,&quot;scope&quot;:[&quot;service&quot;],&quot;client_id&quot;:&quot;amnesty-service-functional-test-service-client&quot;,&quot;client_secret&quot;:&quot;e7db7d60-8cc1-11e6-ae22-56b6b6499611&quot;,&quot;authorized_grant_types&quot;:[&quot;client_credentials&quot;],&quot;redirect_uri&quot;:[&quot;www.example.com&quot;],&quot;access_token_validity&quot;:1576800000}
+--&gt; END POST (311-byte body)
+&lt;-- 204  https://auth-globald.smartthingsgdev.com/clients (746ms)
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:04 GMT
+Expires: 0
+Pragma: no-cache
+Server: SmartThings
+Set-Cookie: JSESSIONID=96DCA1A50F2F908BBD1FA2D111A9007F;path=/;Secure;HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251644371
+OkHttp-Received-Millis: 1524251644512
+&lt;-- END HTTP
+--&gt; POST https://auth-globald.smartthingsgdev.com/clients http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 294
+Authorization: Basic ZGF0YW1nbXQ6UG9ydGVyMDE=
+
+{&quot;name&quot;:&quot;amnesty-service-functional-test-user-client&quot;,&quot;scope&quot;:[&quot;mobile&quot;],&quot;client_id&quot;:&quot;amnesty-service-functional-test-user-client&quot;,&quot;client_secret&quot;:&quot;e7db7d60-8cc1-11e6-ae22-56b6b6499611&quot;,&quot;authorized_grant_types&quot;:[&quot;password&quot;],&quot;redirect_uri&quot;:[&quot;www.example.com&quot;],&quot;access_token_validity&quot;:1576800000}
+--&gt; END POST (294-byte body)
+&lt;-- 204  https://auth-globald.smartthingsgdev.com/clients (138ms)
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:04 GMT
+Expires: 0
+Pragma: no-cache
+Server: SmartThings
+Set-Cookie: JSESSIONID=2EF963D830431FB7AC16C577CBEDC296;path=/;Secure;HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251644519
+OkHttp-Received-Millis: 1524251644655
+&lt;-- END HTTP
+--&gt; POST https://auth-globald.smartthingsgdev.com/clients http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 354
+Authorization: Basic ZGF0YW1nbXQ6UG9ydGVyMDE=
+
+{&quot;name&quot;:&quot;amnesty-service-functional-test-service-client-finegrained&quot;,&quot;scope&quot;:[&quot;w:service:rate:overrides:*&quot;],&quot;client_id&quot;:&quot;amnesty-service-functional-test-service-client-finegrained&quot;,&quot;client_secret&quot;:&quot;e7db7d60-8cc1-11e6-ae22-56b6b6499611&quot;,&quot;authorized_grant_types&quot;:[&quot;client_credentials&quot;],&quot;redirect_uri&quot;:[&quot;www.example.com&quot;],&quot;access_token_validity&quot;:1576800000}
+--&gt; END POST (354-byte body)
+&lt;-- 204  https://auth-globald.smartthingsgdev.com/clients (135ms)
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:04 GMT
+Expires: 0
+Pragma: no-cache
+Server: SmartThings
+Set-Cookie: JSESSIONID=6DD82FCD57384F1C1595539F42BE104D;path=/;Secure;HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251644663
+OkHttp-Received-Millis: 1524251644796
+&lt;-- END HTTP
+--&gt; POST https://auth-globald.smartthingsgdev.com/users http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 201
+Authorization: Basic ZGF0YW1nbXQ6UG9ydGVyMDE=
+
+{&quot;username&quot;:&quot;b869e9d7-e728-4852-8762-2b16b664551d0@example.com&quot;,&quot;email&quot;:&quot;b869e9d7-e728-4852-8762-2b16b664551d@example.com&quot;,&quot;fullName&quot;:&quot;Test b869e9d7-e728-4852-8762-2b16b664551d&quot;,&quot;password&quot;:&quot;Password1&quot;}
+--&gt; END POST (201-byte body)
+&lt;-- 204  https://auth-globald.smartthingsgdev.com/users (979ms)
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:05 GMT
+Expires: 0
+Pragma: no-cache
+Server: SmartThings
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251645001
+OkHttp-Received-Millis: 1524251645978
+&lt;-- END HTTP
+--&gt; POST https://auth-globald.smartthingsgdev.com/oauth/token http/1.1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 246
+Authorization: Basic YW1uZXN0eS1zZXJ2aWNlLWZ1bmN0aW9uYWwtdGVzdC11c2VyLWNsaWVudDplN2RiN2Q2MC04Y2MxLTExZTYtYWUyMi01NmI2YjY0OTk2MTE=
+
+client_id=amnesty-service-functional-test-user-client&amp;client_secret=e7db7d60-8cc1-11e6-ae22-56b6b6499611&amp;username=b869e9d7-e728-4852-8762-2b16b664551d0%40example.com&amp;password=Password1&amp;scope=mobile&amp;grant_type=password&amp;redirect_uri=www.example.com
+--&gt; END POST (246-byte body)
+&lt;-- 200  https://auth-globald.smartthingsgdev.com/oauth/token (235ms)
+Cache-Control: no-store
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:06 GMT
+Pragma: no-cache
+Server: SmartThings
+Set-Cookie: JSESSIONID=EA561457103EF56A55EA6D4A437F6899;path=/;Secure;HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Content-Length: 118
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251646012
+OkHttp-Received-Millis: 1524251646245
+
+{&quot;access_token&quot;:&quot;b5e3fbbc-0fa0-4188-b8bc-51705fd8f7a7&quot;,&quot;token_type&quot;:&quot;bearer&quot;,&quot;expires_in&quot;:1576799999,&quot;scope&quot;:&quot;mobile&quot;}
+&lt;-- END HTTP (118-byte body)
+--&gt; GET https://auth-globald.smartthingsgdev.com/users/me http/1.1
+Authorization: Bearer b5e3fbbc-0fa0-4188-b8bc-51705fd8f7a7
+--&gt; END GET
+&lt;-- 200  https://auth-globald.smartthingsgdev.com/users/me (146ms)
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:06 GMT
+Expires: 0
+Pragma: no-cache
+Server: SmartThings
+Set-Cookie: JSESSIONID=062F4E8E5A5975F0A001679C4242E2B1;path=/;Secure;HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Content-Length: 224
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251646261
+OkHttp-Received-Millis: 1524251646408
+
+{&quot;uuid&quot;:&quot;d9c41268-59d0-428d-97a7-a3708a1a9b98&quot;,&quot;username&quot;:&quot;b869e9d7-e728-4852-8762-2b16b664551d0@example.com&quot;,&quot;email&quot;:&quot;b869e9d7-e728-4852-8762-2b16b664551d@example.com&quot;,&quot;fullName&quot;:&quot;Test b869e9d7-e728-4852-8762-2b16b664551d&quot;}
+&lt;-- END HTTP (224-byte body)
+--&gt; POST https://auth-globald.smartthingsgdev.com/oauth/token http/1.1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 282
+Authorization: Basic YW1uZXN0eS1zZXJ2aWNlLWZ1bmN0aW9uYWwtdGVzdC1zZXJ2aWNlLWNsaWVudDplN2RiN2Q2MC04Y2MxLTExZTYtYWUyMi01NmI2YjY0OTk2MTE=
+
+client_id=amnesty-service-functional-test-service-client&amp;client_secret=e7db7d60-8cc1-11e6-ae22-56b6b6499611&amp;username=amnesty-service-functional-test-service-client&amp;password=e7db7d60-8cc1-11e6-ae22-56b6b6499611&amp;scope=service&amp;grant_type=client_credentials&amp;redirect_uri=www.example.com
+--&gt; END POST (282-byte body)
+&lt;-- 200  https://auth-globald.smartthingsgdev.com/oauth/token (160ms)
+Cache-Control: no-store
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:05 GMT
+Pragma: no-cache
+Server: SmartThings
+Set-Cookie: JSESSIONID=3556C7588562AA412B132B359A77EB91;path=/;Secure;HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Content-Length: 119
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251646423
+OkHttp-Received-Millis: 1524251646581
+
+{&quot;access_token&quot;:&quot;64b5db37-eb73-4bf3-9d8a-cc121820f2b7&quot;,&quot;token_type&quot;:&quot;bearer&quot;,&quot;expires_in&quot;:1574212055,&quot;scope&quot;:&quot;service&quot;}
+&lt;-- END HTTP (119-byte body)
+--&gt; POST https://auth-globald.smartthingsgdev.com/oauth/token http/1.1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 333
+Authorization: Basic YW1uZXN0eS1zZXJ2aWNlLWZ1bmN0aW9uYWwtdGVzdC1zZXJ2aWNlLWNsaWVudC1maW5lZ3JhaW5lZDplN2RiN2Q2MC04Y2MxLTExZTYtYWUyMi01NmI2YjY0OTk2MTE=
+
+client_id=amnesty-service-functional-test-service-client-finegrained&amp;client_secret=e7db7d60-8cc1-11e6-ae22-56b6b6499611&amp;username=amnesty-service-functional-test-service-client-finegrained&amp;password=e7db7d60-8cc1-11e6-ae22-56b6b6499611&amp;scope=w%3Aservice%3Arate%3Aoverrides%3A*&amp;grant_type=client_credentials&amp;redirect_uri=www.example.com
+--&gt; END POST (333-byte body)
+&lt;-- 200  https://auth-globald.smartthingsgdev.com/oauth/token (149ms)
+Cache-Control: no-store
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:06 GMT
+Pragma: no-cache
+Server: SmartThings
+Set-Cookie: JSESSIONID=E55FE2E17413CE893EBF32A7635E1334;path=/;Secure;HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Content-Length: 138
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251646590
+OkHttp-Received-Millis: 1524251646738
+
+{&quot;access_token&quot;:&quot;44e9cae1-6af2-4b7d-8a6d-292779f3d4e5&quot;,&quot;token_type&quot;:&quot;bearer&quot;,&quot;expires_in&quot;:1576030809,&quot;scope&quot;:&quot;w:service:rate:overrides:*&quot;}
+&lt;-- END HTTP (138-byte body)
+--&gt; POST http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 100
+Accept: application/json
+Authorization: Bearer 44e9cae1-6af2-4b7d-8a6d-292779f3d4e5
+
+{&quot;rateLimitOverrideSet&quot;:[{&quot;principalId&quot;:&quot;ours&quot;,&quot;handlerId&quot;:&quot;me&quot;,&quot;bucketId&quot;:&quot;yours&quot;,&quot;rateLimit&quot;:78}]}
+--&gt; END POST (100-byte body)
+&lt;-- 204 No Content http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 (1428ms)
+OkHttp-Sent-Millis: 1524251646853
+OkHttp-Received-Millis: 1524251648260
+&lt;-- END HTTP
+--&gt; GET http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 http/1.1
+Accept: application/json
+Authorization: Bearer 64b5db37-eb73-4bf3-9d8a-cc121820f2b7
+--&gt; END GET
+&lt;-- 200 OK http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 (654ms)
+etag: e59ee1cf9750c32635d876515d72f64e
+content-type: application/json
+transfer-encoding: chunked
+OkHttp-Sent-Millis: 1524251648266
+OkHttp-Received-Millis: 1524251648918
+
+[{&quot;principalId&quot;:&quot;ours&quot;,&quot;handlerId&quot;:&quot;me&quot;,&quot;bucketId&quot;:&quot;yours&quot;,&quot;rateLimit&quot;:78}]
+&lt;-- END HTTP (75-byte body)
+--&gt; GET http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 http/1.1
+Accept: application/json
+Authorization: Bearer 64b5db37-eb73-4bf3-9d8a-cc121820f2b7
+If-None-Match: e59ee1cf9750c32635d876515d72f64e
+--&gt; END GET
+&lt;-- 304 Not Modified http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 (36ms)
+OkHttp-Sent-Millis: 1524251648925
+OkHttp-Received-Millis: 1524251648960
+&lt;-- END HTTP
+--&gt; DELETE http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 http/1.1
+Accept: application/json
+Authorization: Bearer 44e9cae1-6af2-4b7d-8a6d-292779f3d4e5
+--&gt; END DELETE
+&lt;-- 204 No Content http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 (47ms)
+OkHttp-Sent-Millis: 1524251648966
+OkHttp-Received-Millis: 1524251649010
+&lt;-- END HTTP
+--&gt; POST http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 2
+Accept: application/json
+
+{}
+--&gt; END POST (2-byte body)
+&lt;-- 401 Unauthorized http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 (4ms)
+transfer-encoding: chunked
+OkHttp-Sent-Millis: 1524251649025
+OkHttp-Received-Millis: 1524251649027
+
+
+&lt;-- END HTTP (0-byte body)
+--&gt; POST http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 2
+Accept: application/json
+Authorization: Bearer b5e3fbbc-0fa0-4188-b8bc-51705fd8f7a7
+
+{}
+--&gt; END POST (2-byte body)
+&lt;-- 403 Forbidden http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 (623ms)
+transfer-encoding: chunked
+OkHttp-Sent-Millis: 1524251649052
+OkHttp-Received-Millis: 1524251649674
+
+
+&lt;-- END HTTP (0-byte body)
+--&gt; POST http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 2
+Accept: application/json
+Authorization: Bearer 8c6efbb9-7339-4611-9fe2-72ab536bab97
+
+{}
+--&gt; END POST (2-byte body)
+&lt;-- 401 Unauthorized http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 (596ms)
+transfer-encoding: chunked
+OkHttp-Sent-Millis: 1524251649678
+OkHttp-Received-Millis: 1524251650272
+
+
+&lt;-- END HTTP (0-byte body)
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+SLF4J: Failed to load class &quot;org.slf4j.impl.StaticMDCBinder&quot;.
+SLF4J: Defaulting to no-operation MDCAdapter implementation.
+SLF4J: See http://www.slf4j.org/codes.html#no_static_mdc_binder for further details.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 4.6</a> at Apr 20, 2018 2:14:12 PM</p>
+</div>
+</div>
+</body>
+</html>

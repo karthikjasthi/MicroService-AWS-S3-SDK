@@ -1,0 +1,50 @@
+metrics:
+  jvmMetrics: true
+  jmx:
+    enabled: true
+  requestMetricGroups:
+    overridesByServiceName: "overrides/.*"
+    other: ".*"
+
+datadog:
+  enabled: false
+  key: "PLACEHOLDER"
+  prefix: "amnesty"
+  connectionTimeout: 5000
+  socketTimeout: 5000
+  frequencyInSeconds: 20
+  whitelist:
+    - 2xx-responses
+    - 4xx-responses
+    - 5xx-responses
+    - overridesByServiceName
+    - pools
+    - heap
+    - non_heap
+    - total
+    - count
+    - daemon
+    - G1
+    - deadlocks
+
+security:
+  auth:
+    host:  "https://auth-globald.smartthingsgdev.com"
+    user: "ec41d30d-18f6-497c-bdd8-c239fc99ba18"
+    password: "bddb8c1c-28a2-4820-9def-33480eb1c2ad"
+  jwt:
+    enabled: true
+    jwkSetUrl: "https://auth-globald.smartthingsgdev.com/oauth/key"
+    httpConnectTimeoutMillis: 5000
+    httpRequestTimeoutMillis: 5000
+    httpSocketTimeoutMillis: 5000
+
+amnesty:
+  httpClientConnectionPoolSize: 10
+  httpClientReadTimeoutInSeconds: 5
+  s3:
+    accessKey: "accessKey1"
+    secretKey: "verySecretKey1"
+    serviceEndpoint: "http://localhost:8000"
+    region: "us-east-1"
+    bucketName: "amnesty-ratelimit"

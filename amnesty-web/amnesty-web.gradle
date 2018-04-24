@@ -1,0 +1,53 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'io.ratpack.ratpack-java'
+apply from: rootProject.file('gradle/convention.gradle')
+mainClassName = "st.amnesty.RatpackMain"
+apply from: rootProject.file('gradle/publish-shadow.gradle')
+
+run {
+	systemProperties System.getProperties()
+}
+
+test {
+	systemProperty 'app.config', System.getProperty('app.config')
+}
+
+compileJava {
+	options.compilerArgs << '-Xlint:unchecked'
+}
+
+shadowJar {
+	baseName = 'amnesty'
+}
+
+dependencies {
+	compile("smartthings.auth:ratpack:1.0.3")
+	compile "smartthings:st-slf4j:0.0.6"
+	compile "smartthings.ratpack:ratpack-datadog:${ratpackCommon}"
+	compile "smartthings.ratpack:ratpack-config:${ratpackCommon}"
+	compile "smartthings.ratpack:ratpack-http-admin:${ratpackCommon}"
+	compile "smartthings:ratpack-bearer-auth:${bearerAuthVersion}"
+	compile ratpack.dependency("dropwizard-metrics")
+	compile ratpack.dependency("rx")
+	compile "smartthings.common.api:ratpack-api-common:1.0.14"
+	compile "smartthings:cache-common-ratpack:1.0.3"
+	compile "com.amazonaws:aws-java-sdk-s3:1.11.313"
+
+	// Begin Zipkin
+	compile "smartthings.ratpack.brave:ratpack-brave-common:0.3.0"
+	// End Zipkin
+
+	runtime "io.projectreactor:reactor-logback:2.0.8.RELEASE"
+
+	testCompile "org.spockframework:spock-core:1.1-groovy-2.4"
+	testCompile "smartthings:ratpack-bearer-auth-test:${bearerAuthVersion}"
+	testCompile ratpack.dependency("test")
+	testCompile ratpack.dependency("remote")
+	testCompile ratpack.dependency("remote-test")
+	testCompile ratpack.dependency('groovy-test')
+	testRuntime 'cglib:cglib-nodep:3.2.6'
+	testRuntime 'org.objenesis:objenesis:2.6'
+	compileOnly "org.projectlombok:lombok:1.16.20"
+}
+

@@ -1,0 +1,8 @@
+schema: "1"
+pipeline:
+  application: amnesty
+  name: master-trigger
+  template:
+    source: spinnaker://releng-trigger
+configuration:
+  inherit: ['triggers', 'parameters', 'notifications']

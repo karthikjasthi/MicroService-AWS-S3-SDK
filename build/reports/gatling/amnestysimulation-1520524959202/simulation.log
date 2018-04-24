@@ -1,0 +1,6 @@
+RUN	com.st.amnesty.AmnestySimulation		amnestysimulation	1520524959202	 	2.0
+USER	Create overrides on S3	1	START	1520524960711	1520524960711
+REQUEST	Create overrides on S3	1		Post Overrides to S3	1520524960752	1520524961094	KO	status.find.is(204), but actually found 404
+REQUEST	Create overrides on S3	1		Get Overrides from S3	1520524961119	1520524961159	KO	status.find.is(200), but actually found 404
+REQUEST	Create overrides on S3	1		Delete Overrides from S3	1520524961161	1520524961198	KO	status.find.is(204), but actually found 404
+USER	Create overrides on S3	1	END	1520524960711	1520524961215

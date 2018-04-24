@@ -1,0 +1,50 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply from: rootProject.file('gradle/convention.gradle')
+apply from: rootProject.file('gradle/publish-shadow.gradle')
+
+dependencies {
+	testCompile "org.spockframework:spock-core:1.1-groovy-2.4"
+	testCompile "smartthings:testkit-clients:${testkitVersion}"
+	testCompile "smartthings:testkit-data-setup:${testkitVersion}"
+	testCompile "smartthings:functional-test-common:0.0.9-SNAPSHOT-monsrud"
+	testCompile "smartthings:amnesty.st.internal.v20180126:${librarianVersion}"
+}
+
+shadowJar {
+	classifier = 'tests'
+	from sourceSets.test.output
+	configurations = [project.configurations.testRuntime]
+}
+
+test {
+	onlyIf { project.hasProperty("functionalTest") }
+	outputs.upToDateWhen { false }
+
+	if (project.hasProperty('env')) {
+		if ('prod' == env || 'production' == env){
+			environment('environment.production', 'true')
+		}
+		else if ('staging' == env) {
+			environment('environment.staging', 'true')
+		} else if ('load' == env) {
+			environment('environment.load', 'true')
+		} else {
+			environment('environment.dev', 'true')
+		}
+	}
+
+	if (project.hasProperty('serviceUrl')) {
+		systemProperty 'serviceUrl', serviceUrl
+	}
+
+	if (project.hasProperty('serviceToken')) {
+		systemProperty 'serviceToken', serviceToken
+	}
+
+	if (project.hasProperty('tag.prodsmoke')) {
+		systemProperty 'tag.prodsmoke', true
+	}
+
+}
+

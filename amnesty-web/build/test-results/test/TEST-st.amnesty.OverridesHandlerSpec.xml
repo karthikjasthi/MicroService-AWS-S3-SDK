@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="st.amnesty.OverridesHandlerSpec" tests="8" skipped="0" failures="0" errors="0" timestamp="2018-04-17T15:43:25" hostname="STCADMINs-MacBook-Pro.local" time="0.269">
+  <properties/>
+  <testcase name="get request with matching etag returns 304" classname="st.amnesty.OverridesHandlerSpec" time="0.083"/>
+  <testcase name="get request with no Etag and correct service name returns 200 and overrides json" classname="st.amnesty.OverridesHandlerSpec" time="0.026"/>
+  <testcase name="get request with un-matched service name returns 200" classname="st.amnesty.OverridesHandlerSpec" time="0.01"/>
+  <testcase name="post request properly formed returns 204" classname="st.amnesty.OverridesHandlerSpec" time="0.044"/>
+  <testcase name="post request with malformed body returns 422" classname="st.amnesty.OverridesHandlerSpec" time="0.044"/>
+  <testcase name="post request with improper type arguments returns 422" classname="st.amnesty.OverridesHandlerSpec" time="0.03"/>
+  <testcase name="delete request with found service name returns 204" classname="st.amnesty.OverridesHandlerSpec" time="0.015"/>
+  <testcase name="delete request with not found service name returns 404" classname="st.amnesty.OverridesHandlerSpec" time="0.016"/>
+  <system-out><![CDATA[time=10:43:25.822, loggingId=, level=DEBUG, logger=w.o.e.j.u.c.AbstractLifeCycle, message=STOPPED qtp1931448800{STOPPED,8<=8<=10,i=0,q=0}
+time=10:43:25.822, loggingId=, level=DEBUG, logger=w.o.e.j.u.c.AbstractLifeCycle, message=STOPPED wiremock.org.eclipse.jetty.server.Server@32206273
+time=10:43:25.849, loggingId=, level=DEBUG, logger=o.h.v.i.e.r.DefaultTraversableResolver, message=Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+time=10:43:25.849, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=Trying to load META-INF/validation.xml for XML based Validator configuration.
+time=10:43:25.849, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via TCCL
+time=10:43:25.849, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+time=10:43:25.849, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=No META-INF/validation.xml found. Using annotation based configuration only.
+time=10:43:25.920, loggingId=, level=DEBUG, logger=o.h.v.i.e.r.DefaultTraversableResolver, message=Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+time=10:43:25.920, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=Trying to load META-INF/validation.xml for XML based Validator configuration.
+time=10:43:25.920, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via TCCL
+time=10:43:25.921, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+time=10:43:25.921, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=No META-INF/validation.xml found. Using annotation based configuration only.
+time=10:43:25.944, loggingId=, level=DEBUG, logger=o.h.v.i.e.r.DefaultTraversableResolver, message=Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+time=10:43:25.944, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=Trying to load META-INF/validation.xml for XML based Validator configuration.
+time=10:43:25.944, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via TCCL
+time=10:43:25.945, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+time=10:43:25.945, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=No META-INF/validation.xml found. Using annotation based configuration only.
+time=10:43:25.954, loggingId=, level=DEBUG, logger=o.h.v.i.e.r.DefaultTraversableResolver, message=Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+time=10:43:25.954, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=Trying to load META-INF/validation.xml for XML based Validator configuration.
+time=10:43:25.954, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via TCCL
+time=10:43:25.955, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+time=10:43:25.955, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=No META-INF/validation.xml found. Using annotation based configuration only.
+time=10:43:25.999, loggingId=, level=DEBUG, logger=o.h.v.i.e.r.DefaultTraversableResolver, message=Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+time=10:43:25.999, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=Trying to load META-INF/validation.xml for XML based Validator configuration.
+time=10:43:25.999, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via TCCL
+time=10:43:25.999, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+time=10:43:25.999, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=No META-INF/validation.xml found. Using annotation based configuration only.
+time=10:43:26.035, loggingId=, level=DEBUG, logger=s.common.api.ratpack.ApiErrorHandler, message=key=ConstraintViolationError, response=ErrorResponse{ error=Error{ code=ConstraintViolationError, target=null, message='The request is malformed.', details=[Error{ code=BodyMalformedError, target=rateLimitOverrideSet.rateLiit, message='The request body is malformed and cannot be processed by server.', details=[] }] } }
+smartthings.common.exceptions.ViolationException: The request is malformed.
+time=10:43:26.045, loggingId=, level=DEBUG, logger=o.h.v.i.e.r.DefaultTraversableResolver, message=Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+time=10:43:26.045, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=Trying to load META-INF/validation.xml for XML based Validator configuration.
+time=10:43:26.045, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via TCCL
+time=10:43:26.045, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+time=10:43:26.045, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=No META-INF/validation.xml found. Using annotation based configuration only.
+time=10:43:26.069, loggingId=, level=DEBUG, logger=s.common.api.ratpack.ApiErrorHandler, message=key=ConstraintViolationError, response=ErrorResponse{ error=Error{ code=ConstraintViolationError, target=null, message='The request is malformed.', details=[Error{ code=BodyMalformedError, target=rateLimitOverrideSet, message='The request body is malformed and cannot be processed by server.', details=[] }] } }
+smartthings.common.exceptions.ViolationException: The request is malformed.
+time=10:43:26.073, loggingId=, level=DEBUG, logger=o.h.v.i.e.r.DefaultTraversableResolver, message=Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+time=10:43:26.073, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=Trying to load META-INF/validation.xml for XML based Validator configuration.
+time=10:43:26.073, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via TCCL
+time=10:43:26.073, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+time=10:43:26.073, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=No META-INF/validation.xml found. Using annotation based configuration only.
+time=10:43:26.092, loggingId=, level=DEBUG, logger=o.h.v.i.e.r.DefaultTraversableResolver, message=Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+time=10:43:26.092, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=Trying to load META-INF/validation.xml for XML based Validator configuration.
+time=10:43:26.092, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via TCCL
+time=10:43:26.092, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ResourceLoaderHelper, message=Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+time=10:43:26.093, loggingId=, level=DEBUG, logger=o.h.v.i.xml.ValidationXmlParser, message=No META-INF/validation.xml found. Using annotation based configuration only.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

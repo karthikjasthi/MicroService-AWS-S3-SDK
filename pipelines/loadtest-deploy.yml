@@ -1,0 +1,64 @@
+schema: "1"
+pipeline:
+  application: amnesty
+  name: Deploy loadtest
+  template:
+    source: spinnaker://releng-deploy
+  variables:
+    triggerPipelineName: AMI Burn
+    triggerEnabled: false
+    targetAccount: preprod
+    environment: loadtest
+    regions:
+    - us-east-1
+    - eu-west-1
+    slackChannel: iot-edge-deploys
+    notificationConditions:
+    - pipeline.starting
+    - pipeline.complete
+    - pipeline.failed
+    clusters:
+    - name: amnesty-regionalt_useast1
+      stack: regionalt_useast1
+      region: us-east-1
+      availabilityZones:
+      - us-east-1c
+      - us-east-1d
+      - us-east-1e
+      minCapacity: 1
+      maxCapacity: 1
+      desiredCapacity: 1
+      keyPair: preprod-master
+      targetGroups:
+      - amnesty-regionalt-ext
+      - amnesty-regionalt-int
+      iamRole: app-amnesty-profile
+      securityGroups:
+      - sg-26aa1f51
+      - sg-8ff254e9
+      strategy: highlander
+      subnetType: internal_globalt_useast1
+      instanceType: c4.large
+    - name: amnesty-regionalt_euwest1
+      stack: regionalt_euwest1
+      region: eu-west-1
+      availabilityZones:
+      - eu-west-1a
+      - eu-west-1b
+      - eu-west-1c
+      minCapacity: 1
+      maxCapacity: 1
+      desiredCapacity: 1
+      keyPair: preprod-master
+      targetGroups:
+      - amnesty-regionalt-ext
+      - amnesty-regionalt-int
+      iamRole: app-amnesty-profile
+      securityGroups:
+      - sg-056fa67f
+      - sg-b219acd6
+      strategy: highlander
+      subnetType: internal_globalt_euwest1
+      instanceType: c4.large
+configuration:
+  inherit: ['concurrentExecutions', 'triggers', 'parameters', 'notifications']

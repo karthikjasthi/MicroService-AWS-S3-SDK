@@ -1,0 +1,6 @@
+RUN	com.st.amnesty.AmnestySimulation		amnestysimulation	1520527131003	 	2.0
+USER	Create overrides on S3	1	START	1520527132140	1520527132140
+REQUEST	Create overrides on S3	1		Post Overrides to S3	1520527132176	1520527132507	OK	 
+REQUEST	Create overrides on S3	1		Get Overrides from S3	1520527132528	1520527132592	OK	 
+REQUEST	Create overrides on S3	1		Delete Overrides from S3	1520527132604	1520527132668	OK	 
+USER	Create overrides on S3	1	END	1520527132140	1520527132674

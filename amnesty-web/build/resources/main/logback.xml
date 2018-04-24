@@ -1,0 +1,22 @@
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>time=%d{HH:mm:ss.SSS}, loggingId=%X{loggingId}, level=%-5level, logger=%logger{36}, message=%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="ratpack.zipkin" level="INFO"/>
+    <logger name="org.coursera.metrics.datadog.transport" level="INFO"/>
+    <logger name="org.apache.http" level="INFO"/>
+    <logger name="io.netty" level="INFO"/>
+
+    <appender name="async" class="reactor.logback.AsyncAppender">
+        <appender-ref ref="STDOUT"/>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="async" />
+    </root>
+</configuration>

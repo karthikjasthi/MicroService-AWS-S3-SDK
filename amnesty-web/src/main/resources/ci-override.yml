@@ -1,0 +1,4 @@
+metrics:
+  jvmMetrics: false
+  jmx:
+    enabled: false

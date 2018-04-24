@@ -1,0 +1,5 @@
+# This is the file that will be loaded for circle ci tests
+metrics:
+  jvmMetrics: false
+  jmx:
+    enabled: false

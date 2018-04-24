@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="st.amnesty.endpoints.RateLimitFunctionalSpec" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-04-20T19:14:06" hostname="hiusa69579.ad.harman.com" time="3.499">
+  <properties/>
+  <testcase name="post, get, get with eTag, delete overrides on S3" classname="st.amnesty.endpoints.RateLimitFunctionalSpec" time="2.246"/>
+  <testcase name="post No Bearer Token and expects status 401" classname="st.amnesty.endpoints.RateLimitFunctionalSpec" time="0.007"/>
+  <testcase name="Valid Mobile Token expects status 403" classname="st.amnesty.endpoints.RateLimitFunctionalSpec" time="0.646"/>
+  <testcase name="Invalid Token expects status 401" classname="st.amnesty.endpoints.RateLimitFunctionalSpec" time="0.6"/>
+  <system-out><![CDATA[--> GET https://shardinfo-globald.smartthingsgdev.com/shards http/1.1
+--> END GET
+<-- 200 OK https://shardinfo-globald.smartthingsgdev.com/shards (1018ms)
+content-type: application/json
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251643328
+OkHttp-Received-Millis: 1524251643630
+
+[{"id":"eu01d","api":{"scheme":"https","host":"graph-eu01d-euwest1.smartthingsgdev.com","port":"443"},"client":{"scheme":"","host":"cc-eu01d-euwest1.smartthingsgdev.com","port":"443"},"dev":{"scheme":"","host":"dc-eu01d-euwest1.connect.smartthings.com","port":"443"},"marketplace":{"scheme":"https","host":"marketplace-eu01d-euwest1.smartthingsgdev.com","port":"443"},"videoconn":{"scheme":"","host":"vc-eu01d-euwest1.smartthingsgdev.com","port":"443"},"videohost":{"scheme":"","host":"vh-eu01d-euwest1.smartthingsgdev.com","port":"8300"},"apigateway":{"scheme":"https","host":"eu01d.smartthingsgdev.com","port":"443"},"shardtemplate":{"scheme":"https","host":"{service}-eu01d-euwest1.smartthingsgdev.com","port":"443"},"support":{"welcomeUrl":" https://support.smartthings.com/hc/en-uk/categories/200058800","customerPicsUrl":"http://see.smartthings.com","supportUrl":"https://support.smartthings.com/hc/en-uk","chatId":"","email":" support@smartthings.co.uk"}},{"id":"vladtmp","api":{"scheme":"https","host":"87b1fef8.ngrok.io","port":"443"},"client":{"scheme":"","host":"https://87b1fef8.ngrok.io","port":"443"},"dev":{"scheme":"","host":"https://87b1fef8.ngrok.io","port":"443"},"marketplace":null,"videoconn":{"scheme":"","host":"https://87b1fef8.ngrok.io","port":"443"},"videohost":{"scheme":"","host":"https://87b1fef8.ngrok.io","port":"443"},"apigateway":null,"shardtemplate":null,"support":null},{"id":"na99local","api":{"scheme":"http","host":"localhost","port":"8080"},"client":{"scheme":"","host":"localhost","port":"9090"},"dev":{"scheme":"","host":"localhost","port":"9443"},"marketplace":null,"videoconn":{"scheme":"","host":"localhost","port":"443"},"videohost":{"scheme":"","host":"localhost","port":"8300"},"apigateway":{"scheme":"http","host":"localhost","port":"8080"},"shardtemplate":null,"support":null},{"id":"na00d","api":null,"client":null,"dev":null,"marketplace":null,"videoconn":null,"videohost":null,"apigateway":{"scheme":"https","host":"na00d.smartthingsgdev.com","port":"443"},"shardtemplate":{"scheme":"https","host":"d{service}.api.smartthings.com","port":"443"},"support":{"welcomeUrl":"https://support.smartthings.com/categories/20069939WelcometoSmartThings","customerPicsUrl":"http://see.smartthings.com","supportUrl":"http://support.smartthings.com","chatId":"adb2a3dc1aeb470c9a805ce0213cfde4","email":"support@smartthings.com"}},{"id":"na99tom","api":{"scheme":"https","host":"tom-st-api.ngrok.io","port":"443"},"client":{"scheme":"","host":"tom-st-client.ngrok.io","port":"443"},"dev":{"scheme":"","host":"tom-st-dev.ngrok.io","port":"443"},"marketplace":null,"videoconn":{"scheme":"","host":"tom-st-videoconn.ngrok.io","port":"443"},"videohost":{"scheme":"","host":"tom-st-videohost.ngrok.io","port":"443"},"apigateway":{"scheme":"https","host":"tom-st-apigateway.ngrok.io","port":"443"},"shardtemplate":null,"support":null},{"id":"ap99lance","api":{"scheme":"https","host":"lance-st-api.ngrok.io","port":"443"},"client":{"scheme":"","host":"lance-st-client.ngrok.io","port":"443"},"dev":{"scheme":"","host":"lance-st-dev.ngrok.io","port":"443"},"marketplace":null,"videoconn":{"scheme":"","host":"lance-st-videoconn.ngrok.io","port":"443"},"videohost":{"scheme":"","host":"lance-st-videohost.ngrok.io","port":"443"},"apigateway":{"scheme":"https","host":"lance-st-apigateway.ngrok.io","port":"443"},"shardtemplate":null,"support":null},{"id":"na99vlad","api":{"scheme":"https","host":"vlad-st-api.ngrok.io","port":"443"},"client":{"scheme":"","host":"vlad-st-client.ngrok.io","port":"443"},"dev":{"scheme":"","host":"vlad-st-dev.ngrok.io","port":"443"},"marketplace":null,"videoconn":{"scheme":"","host":"vlad-st-videoconn.ngrok.io","port":"443"},"videohost":{"scheme":"","host":"vlad-st-videohost.ngrok.io","port":"443"},"apigateway":{"scheme":"https","host":"vlad-st-apigateway.ngrok.io","port":"443"},"shardtemplate":null,"support":null},{"id":"na02d","api":{"scheme":"https","host":"graph-na02d-uswest2.smartthingsvandev.com","port":"443"},"client":{"scheme":"","host":"cc-na02d-uswest2.smartthingsvandev.com","port":"443"},"dev":{"scheme":"","host":"dc-na02d-uswest2.smartthingsvandev.com","port":"443"},"marketplace":null,"videoconn":null,"videohost":null,"apigateway":null,"shardtemplate":null,"support":{"welcomeUrl":"https://support.smartthings.com/categories/20069939WelcometoSmartThings","customerPicsUrl":"http://see.smartthings.com","supportUrl":"http://support.smartthings.com","chatId":"adb2a3dc1aeb470c9a805ce0213cfde4","email":"support@smartthings.com"}},{"id":"na02local","api":{"scheme":"http","host":"127.0.0.1","port":"8080"},"client":{"scheme":"","host":"127.0.0.1","port":"9101"},"dev":{"scheme":"","host":"127.0.0.1","port":"9001"},"marketplace":null,"videoconn":{"scheme":"","host":"127.0.0.1","port":"443"},"videohost":{"scheme":"","host":"127.0.0.1","port":"8300"},"apigateway":null,"shardtemplate":null,"support":null},{"id":"na01d","api":{"scheme":"https","host":"graph-na01d-useast1.smartthingsgdev.com","port":"443"},"client":{"scheme":"","host":"cc-na01d-useast1.smartthingsgdev.com","port":"443"},"dev":{"scheme":"","host":"dc-na01d-useast1.connect.smartthings.com","port":"443"},"marketplace":{"scheme":"https","host":"marketplace-na01d-useast1.smartthingsgdev.com","port":"443"},"videoconn":{"scheme":"","host":"vc-na01d-useast1.smartthingsgdev.com","port":"443"},"videohost":{"scheme":"","host":"vh-na01d-useast1.smartthingsgdev.com","port":"8300"},"apigateway":{"scheme":"https","host":"na01d.smartthingsgdev.com","port":"443"},"shardtemplate":{"scheme":"https","host":"{service}-na01d-useast1.smartthingsgdev.com","port":"443"},"support":{"welcomeUrl":"https://support.smartthings.com/categories/20069939WelcometoSmartThings","customerPicsUrl":"http://see.smartthings.com","supportUrl":"http://support.smartthings.com","chatId":"adb2a3dc1aeb470c9a805ce0213cfde4","email":"support@smartthings.com"}},{"id":"na99zach","api":{"scheme":"https","host":"zach-st-api.ngrok.io","port":"443"},"client":{"scheme":"","host":"zach-st-client.ngrok.io","port":"443"},"dev":{"scheme":"","host":"zach-st-dev.ngrok.io","port":"443"},"marketplace":null,"videoconn":null,"videohost":null,"apigateway":{"scheme":"","host":"zach-apigateway-api.ngrok.io","port":"443"},"shardtemplate":null,"support":null}]
+<-- END HTTP (6264-byte body)
+--> POST https://auth-globald.smartthingsgdev.com/clients http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 311
+Authorization: Basic ZGF0YW1nbXQ6UG9ydGVyMDE=
+
+{"name":"amnesty-service-functional-test-service-client","scope":["service"],"client_id":"amnesty-service-functional-test-service-client","client_secret":"e7db7d60-8cc1-11e6-ae22-56b6b6499611","authorized_grant_types":["client_credentials"],"redirect_uri":["www.example.com"],"access_token_validity":1576800000}
+--> END POST (311-byte body)
+<-- 204  https://auth-globald.smartthingsgdev.com/clients (746ms)
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:04 GMT
+Expires: 0
+Pragma: no-cache
+Server: SmartThings
+Set-Cookie: JSESSIONID=96DCA1A50F2F908BBD1FA2D111A9007F;path=/;Secure;HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251644371
+OkHttp-Received-Millis: 1524251644512
+<-- END HTTP
+--> POST https://auth-globald.smartthingsgdev.com/clients http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 294
+Authorization: Basic ZGF0YW1nbXQ6UG9ydGVyMDE=
+
+{"name":"amnesty-service-functional-test-user-client","scope":["mobile"],"client_id":"amnesty-service-functional-test-user-client","client_secret":"e7db7d60-8cc1-11e6-ae22-56b6b6499611","authorized_grant_types":["password"],"redirect_uri":["www.example.com"],"access_token_validity":1576800000}
+--> END POST (294-byte body)
+<-- 204  https://auth-globald.smartthingsgdev.com/clients (138ms)
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:04 GMT
+Expires: 0
+Pragma: no-cache
+Server: SmartThings
+Set-Cookie: JSESSIONID=2EF963D830431FB7AC16C577CBEDC296;path=/;Secure;HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251644519
+OkHttp-Received-Millis: 1524251644655
+<-- END HTTP
+--> POST https://auth-globald.smartthingsgdev.com/clients http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 354
+Authorization: Basic ZGF0YW1nbXQ6UG9ydGVyMDE=
+
+{"name":"amnesty-service-functional-test-service-client-finegrained","scope":["w:service:rate:overrides:*"],"client_id":"amnesty-service-functional-test-service-client-finegrained","client_secret":"e7db7d60-8cc1-11e6-ae22-56b6b6499611","authorized_grant_types":["client_credentials"],"redirect_uri":["www.example.com"],"access_token_validity":1576800000}
+--> END POST (354-byte body)
+<-- 204  https://auth-globald.smartthingsgdev.com/clients (135ms)
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:04 GMT
+Expires: 0
+Pragma: no-cache
+Server: SmartThings
+Set-Cookie: JSESSIONID=6DD82FCD57384F1C1595539F42BE104D;path=/;Secure;HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251644663
+OkHttp-Received-Millis: 1524251644796
+<-- END HTTP
+--> POST https://auth-globald.smartthingsgdev.com/users http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 201
+Authorization: Basic ZGF0YW1nbXQ6UG9ydGVyMDE=
+
+{"username":"b869e9d7-e728-4852-8762-2b16b664551d0@example.com","email":"b869e9d7-e728-4852-8762-2b16b664551d@example.com","fullName":"Test b869e9d7-e728-4852-8762-2b16b664551d","password":"Password1"}
+--> END POST (201-byte body)
+<-- 204  https://auth-globald.smartthingsgdev.com/users (979ms)
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:05 GMT
+Expires: 0
+Pragma: no-cache
+Server: SmartThings
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251645001
+OkHttp-Received-Millis: 1524251645978
+<-- END HTTP
+--> POST https://auth-globald.smartthingsgdev.com/oauth/token http/1.1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 246
+Authorization: Basic YW1uZXN0eS1zZXJ2aWNlLWZ1bmN0aW9uYWwtdGVzdC11c2VyLWNsaWVudDplN2RiN2Q2MC04Y2MxLTExZTYtYWUyMi01NmI2YjY0OTk2MTE=
+
+client_id=amnesty-service-functional-test-user-client&client_secret=e7db7d60-8cc1-11e6-ae22-56b6b6499611&username=b869e9d7-e728-4852-8762-2b16b664551d0%40example.com&password=Password1&scope=mobile&grant_type=password&redirect_uri=www.example.com
+--> END POST (246-byte body)
+<-- 200  https://auth-globald.smartthingsgdev.com/oauth/token (235ms)
+Cache-Control: no-store
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:06 GMT
+Pragma: no-cache
+Server: SmartThings
+Set-Cookie: JSESSIONID=EA561457103EF56A55EA6D4A437F6899;path=/;Secure;HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Content-Length: 118
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251646012
+OkHttp-Received-Millis: 1524251646245
+
+{"access_token":"b5e3fbbc-0fa0-4188-b8bc-51705fd8f7a7","token_type":"bearer","expires_in":1576799999,"scope":"mobile"}
+<-- END HTTP (118-byte body)
+--> GET https://auth-globald.smartthingsgdev.com/users/me http/1.1
+Authorization: Bearer b5e3fbbc-0fa0-4188-b8bc-51705fd8f7a7
+--> END GET
+<-- 200  https://auth-globald.smartthingsgdev.com/users/me (146ms)
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:06 GMT
+Expires: 0
+Pragma: no-cache
+Server: SmartThings
+Set-Cookie: JSESSIONID=062F4E8E5A5975F0A001679C4242E2B1;path=/;Secure;HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Content-Length: 224
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251646261
+OkHttp-Received-Millis: 1524251646408
+
+{"uuid":"d9c41268-59d0-428d-97a7-a3708a1a9b98","username":"b869e9d7-e728-4852-8762-2b16b664551d0@example.com","email":"b869e9d7-e728-4852-8762-2b16b664551d@example.com","fullName":"Test b869e9d7-e728-4852-8762-2b16b664551d"}
+<-- END HTTP (224-byte body)
+--> POST https://auth-globald.smartthingsgdev.com/oauth/token http/1.1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 282
+Authorization: Basic YW1uZXN0eS1zZXJ2aWNlLWZ1bmN0aW9uYWwtdGVzdC1zZXJ2aWNlLWNsaWVudDplN2RiN2Q2MC04Y2MxLTExZTYtYWUyMi01NmI2YjY0OTk2MTE=
+
+client_id=amnesty-service-functional-test-service-client&client_secret=e7db7d60-8cc1-11e6-ae22-56b6b6499611&username=amnesty-service-functional-test-service-client&password=e7db7d60-8cc1-11e6-ae22-56b6b6499611&scope=service&grant_type=client_credentials&redirect_uri=www.example.com
+--> END POST (282-byte body)
+<-- 200  https://auth-globald.smartthingsgdev.com/oauth/token (160ms)
+Cache-Control: no-store
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:05 GMT
+Pragma: no-cache
+Server: SmartThings
+Set-Cookie: JSESSIONID=3556C7588562AA412B132B359A77EB91;path=/;Secure;HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Content-Length: 119
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251646423
+OkHttp-Received-Millis: 1524251646581
+
+{"access_token":"64b5db37-eb73-4bf3-9d8a-cc121820f2b7","token_type":"bearer","expires_in":1574212055,"scope":"service"}
+<-- END HTTP (119-byte body)
+--> POST https://auth-globald.smartthingsgdev.com/oauth/token http/1.1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 333
+Authorization: Basic YW1uZXN0eS1zZXJ2aWNlLWZ1bmN0aW9uYWwtdGVzdC1zZXJ2aWNlLWNsaWVudC1maW5lZ3JhaW5lZDplN2RiN2Q2MC04Y2MxLTExZTYtYWUyMi01NmI2YjY0OTk2MTE=
+
+client_id=amnesty-service-functional-test-service-client-finegrained&client_secret=e7db7d60-8cc1-11e6-ae22-56b6b6499611&username=amnesty-service-functional-test-service-client-finegrained&password=e7db7d60-8cc1-11e6-ae22-56b6b6499611&scope=w%3Aservice%3Arate%3Aoverrides%3A*&grant_type=client_credentials&redirect_uri=www.example.com
+--> END POST (333-byte body)
+<-- 200  https://auth-globald.smartthingsgdev.com/oauth/token (149ms)
+Cache-Control: no-store
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 20 Apr 2018 19:14:06 GMT
+Pragma: no-cache
+Server: SmartThings
+Set-Cookie: JSESSIONID=E55FE2E17413CE893EBF32A7635E1334;path=/;Secure;HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: application:production:8180
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Content-Length: 138
+Connection: keep-alive
+OkHttp-Sent-Millis: 1524251646590
+OkHttp-Received-Millis: 1524251646738
+
+{"access_token":"44e9cae1-6af2-4b7d-8a6d-292779f3d4e5","token_type":"bearer","expires_in":1576030809,"scope":"w:service:rate:overrides:*"}
+<-- END HTTP (138-byte body)
+--> POST http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 100
+Accept: application/json
+Authorization: Bearer 44e9cae1-6af2-4b7d-8a6d-292779f3d4e5
+
+{"rateLimitOverrideSet":[{"principalId":"ours","handlerId":"me","bucketId":"yours","rateLimit":78}]}
+--> END POST (100-byte body)
+<-- 204 No Content http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 (1428ms)
+OkHttp-Sent-Millis: 1524251646853
+OkHttp-Received-Millis: 1524251648260
+<-- END HTTP
+--> GET http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 http/1.1
+Accept: application/json
+Authorization: Bearer 64b5db37-eb73-4bf3-9d8a-cc121820f2b7
+--> END GET
+<-- 200 OK http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 (654ms)
+etag: e59ee1cf9750c32635d876515d72f64e
+content-type: application/json
+transfer-encoding: chunked
+OkHttp-Sent-Millis: 1524251648266
+OkHttp-Received-Millis: 1524251648918
+
+[{"principalId":"ours","handlerId":"me","bucketId":"yours","rateLimit":78}]
+<-- END HTTP (75-byte body)
+--> GET http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 http/1.1
+Accept: application/json
+Authorization: Bearer 64b5db37-eb73-4bf3-9d8a-cc121820f2b7
+If-None-Match: e59ee1cf9750c32635d876515d72f64e
+--> END GET
+<-- 304 Not Modified http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 (36ms)
+OkHttp-Sent-Millis: 1524251648925
+OkHttp-Received-Millis: 1524251648960
+<-- END HTTP
+--> DELETE http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 http/1.1
+Accept: application/json
+Authorization: Bearer 44e9cae1-6af2-4b7d-8a6d-292779f3d4e5
+--> END DELETE
+<-- 204 No Content http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 (47ms)
+OkHttp-Sent-Millis: 1524251648966
+OkHttp-Received-Millis: 1524251649010
+<-- END HTTP
+--> POST http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 2
+Accept: application/json
+
+{}
+--> END POST (2-byte body)
+<-- 401 Unauthorized http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 (4ms)
+transfer-encoding: chunked
+OkHttp-Sent-Millis: 1524251649025
+OkHttp-Received-Millis: 1524251649027
+
+
+<-- END HTTP (0-byte body)
+--> POST http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 2
+Accept: application/json
+Authorization: Bearer b5e3fbbc-0fa0-4188-b8bc-51705fd8f7a7
+
+{}
+--> END POST (2-byte body)
+<-- 403 Forbidden http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 (623ms)
+transfer-encoding: chunked
+OkHttp-Sent-Millis: 1524251649052
+OkHttp-Received-Millis: 1524251649674
+
+
+<-- END HTTP (0-byte body)
+--> POST http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 http/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 2
+Accept: application/json
+Authorization: Bearer 8c6efbb9-7339-4611-9fe2-72ab536bab97
+
+{}
+--> END POST (2-byte body)
+<-- 401 Unauthorized http://localhost:8233/overrides/ed904127-a219-4d78-a96c-04ea52b4de10 (596ms)
+transfer-encoding: chunked
+OkHttp-Sent-Millis: 1524251649678
+OkHttp-Received-Millis: 1524251650272
+
+
+<-- END HTTP (0-byte body)
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+SLF4J: Failed to load class "org.slf4j.impl.StaticMDCBinder".
+SLF4J: Defaulting to no-operation MDCAdapter implementation.
+SLF4J: See http://www.slf4j.org/codes.html#no_static_mdc_binder for further details.
+]]></system-err>
+</testsuite>

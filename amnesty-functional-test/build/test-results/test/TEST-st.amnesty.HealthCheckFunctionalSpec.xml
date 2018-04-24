@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="st.amnesty.HealthCheckFunctionalSpec" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-04-20T19:14:10" hostname="hiusa69579.ad.harman.com" time="0.046">
+  <properties/>
+  <testcase name="it should have a healthy health check" classname="st.amnesty.HealthCheckFunctionalSpec" time="0.035"/>
+  <testcase name="it should have reachable build info" classname="st.amnesty.HealthCheckFunctionalSpec" time="0.011"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,34 @@
+apply plugin: 'scala'
+apply plugin: 'application'
+mainClassName = "st.amnesty.AmnestySimulationEngine"
+apply plugin: 'com.github.johnrengelman.shadow'
+
+apply from: rootProject.file('gradle/publish-shadow.gradle')
+
+dependencies {
+	compile "io.gatling:gatling-core:${gatlingVersion}"
+	compile "io.gatling:gatling-http:${gatlingVersion}"
+	compile "io.gatling.highcharts:gatling-charts-highcharts:${gatlingVersion}"
+
+	compile "org.scala-lang:scala-library:$scalaVersion"
+	compile "org.scala-lang:scala-compiler:$scalaVersion"
+	compile "smartthings:testkit-clients:${testkitVersion}"
+	compile "smartthings:testkit-data-setup:${testkitVersion}"
+}
+
+ScalaCompileOptions.metaClass.daemonServer = true
+ScalaCompileOptions.metaClass.fork = true
+ScalaCompileOptions.metaClass.useAnt = false
+ScalaCompileOptions.metaClass.useCompileDaemon = false
+
+run {
+	systemProperties System.properties
+}
+
+shadowJar {
+	classifier = 'load'
+	mergeServiceFiles()
+	exclude 'META-INF/*.DSA'
+	exclude 'META-INF/*.RSA'
+	exclude 'META-INF/*.SF'
+}

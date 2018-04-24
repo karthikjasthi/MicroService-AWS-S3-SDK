@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="st.amnesty.OverridesServiceImplSpec" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-04-17T15:43:06" hostname="STCADMINs-MacBook-Pro.local" time="7.532">
+  <properties/>
+  <testcase name="Read Objects from S3" classname="st.amnesty.OverridesServiceImplSpec" time="7.282"/>
+  <testcase name="Write Objects to S3" classname="st.amnesty.OverridesServiceImplSpec" time="0.108"/>
+  <testcase name="Parsing an Object from S3" classname="st.amnesty.OverridesServiceImplSpec" time="0.118"/>
+  <testcase name="Create Bucket on S3 if it does not already exist" classname="st.amnesty.OverridesServiceImplSpec" time="0.014"/>
+  <testcase name="Return null when S3 bucket does not exist" classname="st.amnesty.OverridesServiceImplSpec" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

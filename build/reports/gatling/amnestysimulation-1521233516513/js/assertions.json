@@ -1,0 +1,10 @@
+{
+  "simulation": "st.amnesty.AmnestySimulation",
+  "simulationId": "amnestysimulation",
+  "start": 1521233516513,
+  "description": "",
+  "scenarios": ["Combined test"],
+  "assertions": [
+
+  ]
+}

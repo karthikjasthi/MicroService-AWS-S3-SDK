@@ -1,0 +1,6 @@
+RUN	com.st.amnesty.AmnestySimulation		amnestysimulation	1520535569155	 	2.0
+USER	Create overrides on S3	1	START	1520535570357	1520535570357
+REQUEST	Create overrides on S3	1		Post Overrides to S3	1520535570400	1520535570400	KO	j.n.ConnectException: Connection refused: localhost/127.0.0.1:8233
+REQUEST	Create overrides on S3	1		Get Overrides from S3	1520535571038	1520535571038	KO	j.n.ConnectException: Connection refused: localhost/127.0.0.1:8233
+REQUEST	Create overrides on S3	1		Delete Overrides from S3	1520535571656	1520535571656	KO	j.n.ConnectException: Connection refused: localhost/127.0.0.1:8233
+USER	Create overrides on S3	1	END	1520535570357	1520535572277

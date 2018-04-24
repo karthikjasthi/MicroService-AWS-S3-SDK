@@ -1,0 +1,10 @@
+{
+  "simulation": "com.st.amnesty.AmnestySimulation",
+  "simulationId": "amnestysimulation",
+  "start": 1520624775321,
+  "description": "",
+  "scenarios": ["Create overrides on S3"],
+  "assertions": [
+
+  ]
+}

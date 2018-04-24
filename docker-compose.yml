@@ -1,0 +1,7 @@
+version: '2'
+services:
+  s3server:
+    image: scality/s3server
+    ports:
+      - "8000:8000"
+

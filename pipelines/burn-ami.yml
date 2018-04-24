@@ -1,0 +1,20 @@
+schema: "1"
+pipeline:
+  application: amnesty
+  name: AMI Burn
+  template:
+    source: spinnaker://releng-burn-ami
+  variables:
+    triggerPipelineName: release-trigger
+    regions:
+    - us-east-1
+    - us-east-2
+    - eu-west-1
+    - ap-northeast-2
+    slackChannel: iot-edge-deploys
+    notificationConditions:
+    - pipeline.starting
+    - pipeline.complete
+    - pipeline.failed
+configuration:
+  inherit: ['triggers', 'parameters', 'notifications']
